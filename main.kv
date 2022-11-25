@@ -1,0 +1,27 @@
+<MyDisplayData>:
+    orientation: 'vertical'
+    BoxLayout:    
+        Label:
+            text: root.display_text
+
+    BoxLayout:
+        Button:
+            id: start_btn
+            text: "start"
+            on_press: root.on_btn_start()
+            size_hint: .2, .2 
+            disabled: not root.connect_stream
+
+        Button:
+            id: start_stream
+            text: "Stream"
+            on_press: root.on_btn_data_stream()
+            size_hint: .2, .2 
+            disabled: not root.data_stream
+        
+        Button:
+            id: stop_btn
+            text: "stop"
+            size_hint: .2, .2 
+            on_press: root.on_btn_stop()
+            disabled: root.connect_stream
