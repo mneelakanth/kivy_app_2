@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = Simple APP
+title = Simple
 
 # (str) Package name
-package.name = mySimpleapp
+package.name = mySimple
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.test
@@ -263,7 +263,7 @@ fullscreen = 0
 # (list) The Android archs to build for, choices: armeabi-v7a, arm64-v8a, x86, x86_64
 # In past, was `android.arch` as we weren't supporting builds for multiple archs at the same time.
 
-android.archs = arm64-v8a, x86_64
+android.archs = arm64-v8a, armeabi-v7a, x86_64
 #android.archs = 
 
 # (int) overrides automatic versionCode computation (used in build.gradle)
@@ -303,7 +303,7 @@ android.allow_backup = True
 
 # (str) python-for-android branch to use, defaults to master
 #p4a.branch = master
-p4a.branch = develop
+#p4a.branch = develop
 
 
 # (str) python-for-android specific commit to use, defaults to HEAD, must be within p4a.branch
